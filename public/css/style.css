@@ -1,0 +1,229 @@
+/*
+	Theme Name: Smylen Dream Homestay
+	Author: Kristoffer Jimenez
+	Version: 0.1
+*/
+.viewport-height {
+	height: 100vh;
+}
+.parallax {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.parallax-menu {
+	min-height: 450px;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.jumbotron {
+	color: white;
+	text-shadow: #444 0 1px 1px;
+	margin-bottom: 0;
+}
+#jumbotron-banner {
+	margin-top: 20px;
+}
+.jumbotron-content-margin {
+	margin-top: 40px;
+}
+.jumbotron-contact-margin {
+	margin-top: 70px;
+}
+.navbar-nav li a{
+	color:white;
+}
+
+.navbar-dark 
+.navbar-nav 
+.nav-link{
+	color:white;
+}
+.active{
+	border-bottom:2px solid white;
+}
+
+.playfair-font {
+	font-family: 'Playfair Display', serif;
+}
+.custom-margin-top {
+	margin-top: 50px;
+}
+.custom-margin-bottom {
+	margin-bottom: 50px;
+}
+
+.social-link:hover{
+	text-decoration: none;
+}
+.custom-bg-transparent {
+	background-color: rgba(0,0,0,0.5);
+}
+.nav-pills-size {
+	height: 100px;
+	width: 100%;
+}
+.nav-pills-v-center {
+	margin-top: 5px;
+}
+
+.custom-nav-pills-active:hover,
+.custom-nav-pills-active {
+	color: #28a745;
+}
+.custom-nav-pills:hover {
+	color: #28a745;
+	background-color: white;
+	text-decoration: none;
+}
+.custom-nav-pills-inactive {
+	background-color: white;
+	color:#6c757d;
+}
+
+.page-item.active .page-link {
+	background-color: #28a745;
+	border-color: #28a745;
+}
+.page-link {
+	color: #28a745;
+}
+.page-link:hover {
+	color:#6c757d;
+}
+.source-sans-pro {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+}
+.item-container {
+	height: 25em;
+}
+.img-item-view {
+	max-width: 100%;
+	max-height: 100%;
+}
+.img-item {
+	position: relative;
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+.example {
+	text-align: center;
+}
+  
+.example img {
+	width: 100%;
+	height: 100%;
+}
+  
+.example-cover img {
+	object-fit: cover;
+}
+#img-container {
+	overflow: hidden;
+}
+p img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.blog-link {
+	color:black;
+}
+.blog-link:hover {
+	color:#1a8834;
+}
+
+.table td.text {
+    max-width: 177px;
+}
+.table td.text span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+.bg-lightgrey {
+    background-color: #DCDCDC;
+}
+
+/*------------------------------------------- Admin Dashboard ---------------------------------------------------*/
+.bg-card-text {
+    right:0px;
+    bottom:0px;
+    background-color: rgba(254, 254, 254, 0.8);
+    width: 100%;
+}
+
+.custom-nav-link {
+	display: block;
+	padding: .5rem 1rem;
+	color: rgb(147, 199, 171);
+}
+
+.custom-active,
+.custom-nav-link:hover {
+	text-decoration: none;
+	background-color:rgb(90, 161, 123);
+	color: white;
+}
+
+.custom-div-padding {
+	padding: 0;
+}
+
+.smylen-bckgnd-color {
+	background-color:rgb(67, 139, 100);
+	color: white;
+}
+
+.smylen-posts {
+	background-color:white; 
+	border-radius: 1px; 
+	margin: 10px 10px 10px 10px;
+}
+
+.smylen-posts-link:hover, 
+.smylen-posts-link{
+	text-decoration: none;
+	color: rgb(67, 139, 100);
+}
+
+.posts-margin {
+	margin: 10px 10px 10px 10px;
+}
+
+.btn-outline-delete {
+	color: #dc3545;
+	background-color: transparent;
+}
+
+.btn-outline-delete:hover {
+	background-color: #dc3545;
+	color: white;
+}
+
+.smylen-btn {
+	background-color: #e9ebee;
+	color: rgb(67, 139, 100);
+	border :1px solid rgb(67, 139, 100);
+}
+
+.smylen-btn:hover {
+	background-color: rgb(67, 139, 100);
+	color: white;
+}
+
+.side-nav-fixed {
+	position: fixed;
+	z-index: 1;
+}
+
+.contact-font-size {
+	font-size:20px;
+}
