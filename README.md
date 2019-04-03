@@ -34,7 +34,7 @@
 
 > DB_HOST=localhost
 
-> DB_DATABASE=students_data
+> DB_DATABASE=smylen_db
 
 > DB_USERNAME=root
 
