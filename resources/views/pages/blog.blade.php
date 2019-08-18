@@ -16,14 +16,14 @@
         <h2 class="text-success">Latest Posts</h2>
     </div>
 </div>
-    
+
 <div class="container mt-2">
     <div class="row">
-            
+
             @foreach ($posts as $post)
                 <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
                     <div class="card shadow">
-                      <img class="card-img-top" src="{{ asset('images/'.$post->featured_image) }}">
+                      <img class="card-img-top" src="{{route('resizer', ['photo' => $post->featured_image, 'width' => 253, 'height' => 150] )}}">
                       <div class="card-body">
                         <h5 class="card-title">{{ $post->title }}</h5>
                         <sup><strong>{{ $post->created_at->format('F d, Y') }} by {{ $post->author }}</strong></sup>
@@ -33,11 +33,11 @@
                     </div>
                 </div>
             @endforeach
-            
+
             @include('/admin_dashboard/components/navigation/pagination')
     </div>
 
     {{-- @include('/master/components/navigation/pagination') --}}
 </div>
-    
+
 @endsection

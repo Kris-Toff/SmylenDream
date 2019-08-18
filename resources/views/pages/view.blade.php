@@ -85,7 +85,7 @@
                     <div class="col-md-3 col-sm-6" style="margin-bottom:50px;">
                         <a class="social-link" href="/{{ $item->id }}/view">
                             <div class="card shadow">
-                                    <img class="card-img-top img-fluid" src="{{ asset('images/'.$item->image) }}" alt="{{ asset('images/'.$item->image) }}">
+                                    <img class="card-img-top img-fluid" src="{{route('resizer', ['photo' => $item->image, 'width' => 253, 'height' => 253] )}}" alt="{{ asset('images/'.$item->image) }}">
                                 <div class="card-body text-center text-success">
                                 <h5 class="card-title">{{ $item->name }}</h5>
                                 </div>

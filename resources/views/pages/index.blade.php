@@ -17,7 +17,8 @@
             <a href="/benefits" class="btn btn-outline-success my-2 my-sm-0">Read more</a>
         </div>
         <div class="col-md-6">
-		<img class="img-fluid" src="{{ asset('images/health-benefits.png') }}">
+		{{-- <img class="img-fluid" src="{{ asset('images/health-benefits.png') }}"> --}}
+		<img class="img-fluid" src="{{route('resizer', ['photo' => 'health-benefits.png', 'width' => 645, 'height' => 415] )}}">
         </div>
     </div>
 </div>
