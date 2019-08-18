@@ -22,18 +22,18 @@ class PagesController extends Controller
 
     public function search(Request $request)
     {
-        
+
         $search = $request->search;
-        
+
         $products = Products::where('name', 'like', '%'.$search.'%')
                             ->orWhere('short_description', 'like', '%'.$search.'%')
                             ->paginate(21);
-        
+
         $posts = Posts::where('title', 'like', '%'.$search.'%')
                         ->orWhere('short_description', 'like', '%'.$search.'%')
                         ->orWhere('content', 'like', '%'.$search.'%')
                         ->paginate(21);
-        
+
         return view('/pages/search', compact(['products','search','posts']));
 
     }
@@ -43,11 +43,11 @@ class PagesController extends Controller
         $product = Products::findOrFail($id);
 
         $dimensions = $product->stringToArray($product);
-        
+
         $relatedItems = Products::where('category', $product->category)->where('id', '!=', $id)->paginate(4);
- 
+
         $product['price'] = number_format($product->price, 2, '.', ' ');
-        
+
        return view('pages/view', compact(['product', 'relatedItems', 'dimensions']));
     }
 

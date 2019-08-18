@@ -72,8 +72,8 @@
 			<div class="col-md-3 col-sm-6 mt-4">
 				<a class="social-link" href="/{{ $product->id }}/view">
 					<div class="card">
-					<img class="card-img-top img-fluid" src="{{ asset('images/'.$product->image) }}" alt="{{ $product->name }}">
-						<div class="card-body text-center text-success">
+					    <img class="card-img-top img-fluid" src="{{route('resizer', ['photo' => $product->image, 'width' => 253, 'height' => 253] )}}" alt="{{ $product->name }}">
+                        <div class="card-body text-center text-success">
 						<h5 class="card-title">{{ $product->name }}</h5>
 						</div>
 					</div>

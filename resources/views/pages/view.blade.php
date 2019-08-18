@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="col-md-12">
-                    <img class="img-item-view img-thumbnail" src="{{ asset('images/'.$product->image) }}">
+					<img class="img-item-view img-thumbnail" src="{{route('resizer', ['photo' => $product->image, 'width' => 405, 'height' => 405] )}}" alt="{{ $product->name }}">
                 </div>
             </div>
             <div class="col-md-6 align-self-start mt-5">
@@ -31,22 +31,22 @@
                     <h5 class="text-justify">{{ $product->short_description }}</h5>
                     <br>
                     <h5 class="playfair-font">Category: <a href="/products/{{ $product->category }}/category" class="badge badge-success">{{ $product->category }}</a></h5>
-                    <div class="fb-share-button" 
-                        data-href="{{ url()->full() }}" 
+                    <div class="fb-share-button"
+                        data-href="{{ url()->full() }}"
                         data-layout="button">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="container custom-margin-top">
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3 class="playfair-font font-weight-bold text-success">Additional Information</h3>
             </div>
         </div>
-    
+
         <div class="row">
             <div class="col-md-6">
                 <div class="col-md-12 border">
@@ -66,20 +66,20 @@
                         <tr>
                             @for ($i = 1; $i < count($dimensions) ; $i+=2)
                                 <td>{{ $dimensions[$i] }}</td>
-                            @endfor	
+                            @endfor
                         </tr>
                     </table>
                 </div>
         </div>
     </div>
-    
+
     <div class="container custom-margin-top">
         <div class="row custom-margin-bottom">
             <div class="col-md-12 text-center">
                     <h3 class="playfair-font font-weight-bold text-success">Related Products</h3>
             </div>
         </div>
-    
+
         <div class="row">
                 @foreach ($relatedItems as $item)
                     <div class="col-md-3 col-sm-6" style="margin-bottom:50px;">

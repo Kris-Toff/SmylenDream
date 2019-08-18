@@ -73,3 +73,15 @@ Auth::routes([
     'reset' => false, // Password Reset Routes...
     'verify' => false, // Email Verification Routes...
 ]);
+
+Route::get('resizer/{photo}/{width}/{height}', function($photo, $width, $height) {
+
+    $url = public_path('images/'.$photo);
+
+    $res = Image::cache(function ($photo) use ($url, $width, $height) {
+        return $photo->make($url)->resize($width, $height);
+    }, 9999, true);
+
+    return $res->response();
+
+    })->name('resizer');
