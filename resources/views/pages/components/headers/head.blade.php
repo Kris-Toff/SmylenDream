@@ -2,6 +2,7 @@
 <meta charset="UTF-8">
 @yield('meta')
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 <link rel="stylesheet" type="text/css" href="/css/app.css">
 

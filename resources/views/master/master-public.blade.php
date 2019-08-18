@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 		@include('pages.components.headers.head')
-		
 		<script src="/js/app.js"></script>
 </head>
 <body>
@@ -31,7 +30,7 @@
 		//Insert Comment
 		$("#postComment").click(function(e){
 			e.preventDefault();
-			
+
 			$("#postComment").text('Posting...');
 
 			$.ajaxSetup({
@@ -39,17 +38,17 @@
 					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 				}
 			});
-			
+
 			var post_id = $("#post_id").val();
 			var name = $("#name").val();
-			var body = $("#body").val(); 
-			
+			var body = $("#body").val();
+
 			$.ajax({
 				url: '/blog/post',
 				type: 'POST',
 				data: {
-					post_id: post_id, 
-					name: name, 
+					post_id: post_id,
+					name: name,
 					body: body,
 				},
 				success: function(data) {
@@ -60,7 +59,7 @@
 								'</div>';
 
 					$(recent).prependTo("#recent");
-					$('#commentForm').trigger("reset");	
+					$('#commentForm').trigger("reset");
 				},
 				complete: function() {
 					$("#postComment").text('Post Comment');
@@ -100,7 +99,7 @@
 					var recent = [];
 
 					for (let index = 10; index < data.comments.data.length; index++) {
-						
+
 						recent += '<div class="col-md-12 bg-lightgrey border rounded py-1 my-1">' +
 									'<h5><strong>' + data.comments.data[index].name + '</strong></h5>' +
 									'<p><strong style="font-size:12px;">' + data.comments.data[index].created_at + '</strong></p>' +
@@ -108,7 +107,7 @@
 									'</div>';
 
 					}
-					
+
 					$(recent).appendTo("#load");
 
 				},
@@ -125,4 +124,4 @@
 </script>
 
 </body>
-</html> 
+</html>
